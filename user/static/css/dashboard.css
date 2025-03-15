@@ -1,11 +1,11 @@
-/* General Reset */
+/* Reset default browser styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body Styling */
+/* Body Styling - center content vertically and horizontally */
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #f8f9fa;
@@ -17,7 +17,7 @@ body {
     overflow-x: hidden;
 }
 
-/* Dashboard Container */
+/* Main Dashboard Container */
 .dashboard-container {
     display: flex;
     width: 100%;
@@ -27,7 +27,7 @@ body {
     overflow: hidden;
 }
 
-/* Sidebar */
+/* Sidebar Styling */
 .sidebar {
     width: 250px;
     background-color: #15161d;
@@ -39,10 +39,12 @@ body {
     transition: width 0.3s ease;
 }
 
+/* Sidebar expands on hover */
 .sidebar:hover {
     width: 270px;
 }
 
+/* Sidebar Logo Section */
 .sidebar .logo-container {
     display: flex;
     align-items: center;
@@ -53,7 +55,7 @@ body {
 .sidebar .logo-container .logo {
     width: 40px;
     height: auto;
-    filter: brightness(0) invert(1);
+    filter: brightness(0) invert(1); /* Makes the logo white */
 }
 
 .sidebar .logo-container span {
@@ -62,6 +64,7 @@ body {
     color: white;
 }
 
+/* Sidebar Menu Items */
 .sidebar .menu ul {
     list-style: none;
     padding: 0;
@@ -78,12 +81,14 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Active and hover states for menu items */
 .sidebar .menu ul li.active,
 .sidebar .menu ul li:hover {
     background-color: #343a40;
     color: white;
 }
 
+/* Sidebar Report Section */
 .sidebar .report h4 {
     font-size: 18px;
     font-weight: 600;
@@ -111,6 +116,7 @@ body {
     color: white;
 }
 
+/* Sidebar Logout Button */
 .sidebar .logout {
     margin-top: auto;
     background-color: #ff6b6b;
@@ -128,7 +134,7 @@ body {
     background-color: #d64040;
 }
 
-/* Main Content */
+/* Main Content Section */
 .main-content {
     flex: 1;
     padding: 30px;
@@ -136,7 +142,7 @@ body {
     background-color: #f1f1f1;
 }
 
-/* Header */
+/* Header Section */
 .header {
     display: flex;
     justify-content: space-between;
@@ -155,12 +161,14 @@ body {
     margin-top: 5px;
 }
 
+/* Search and Notification Section */
 .header .search-notification {
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
+/* Search Input and Button */
 .header .search {
     display: flex;
     align-items: center;
@@ -194,6 +202,7 @@ body {
     background-color: #007acc;
 }
 
+/* Notification Icon */
 .header .notification {
     font-size: 20px;
     color: #777;
@@ -205,7 +214,7 @@ body {
     color: #00aaff;
 }
 
-/* Cards Section */
+/* Cards Section - Overview widgets */
 .cards-section {
     display: flex;
     flex-wrap: wrap;
@@ -213,6 +222,7 @@ body {
     margin-bottom: 30px;
 }
 
+/* Individual Card Styles */
 .card {
     flex: 1 1 calc(33.333% - 20px);
     background-color: #fff;
@@ -244,6 +254,7 @@ body {
     font-weight: 500;
 }
 
+/* Positive and Negative Change Colors */
 .card .change.green {
     color: #4caf50;
 }
@@ -252,7 +263,7 @@ body {
     color: #f44336;
 }
 
-/* Property Section */
+/* Property Section - Filters and actions */
 .property-section {
     margin-bottom: 30px;
     background: #fff;
@@ -282,6 +293,7 @@ body {
     border-radius: 6px;
 }
 
+/* Filter button styles */
 .property-section button {
     background-color: #00aaff;
     color: white;
@@ -294,7 +306,7 @@ body {
     background-color: #007acc;
 }
 
-/* Status Section */
+/* Status Section - Table styles */
 .status-section table {
     width: 100%;
     border-collapse: collapse;
@@ -319,10 +331,12 @@ body {
     font-size: 14px;
 }
 
+/* Row hover effect */
 .status-section tbody tr:hover {
     background-color: #f3f3f3;
 }
 
+/* Status color indicators */
 .status-section td.status.green {
     color: #4caf50;
 }
@@ -335,6 +349,7 @@ body {
     color: #f44336;
 }
 
+/* Action button in status table */
 .status-section button {
     background-color: #00aaff;
     border: none;
@@ -369,7 +384,7 @@ body {
     max-height: 300px;
 }
 
-/* Responsive Design */
+/* Responsive Design - Medium screens */
 @media (max-width: 1200px) {
     .cards-section {
         flex-wrap: wrap;
@@ -379,6 +394,7 @@ body {
     }
 }
 
+/* Responsive Design - Small screens */
 @media (max-width: 768px) {
     .cards-section {
         flex-direction: column;
