@@ -628,105 +628,138 @@
       margin-top: 20px;
     }
 
-    /* Responsive Styling */
-    @media (max-width: 1024px) {
-      .sidebar {
-        width: 70px;
-        padding: 20px 10px;
-      }
+   /* Responsive Styling */
 
-      .main-content {
-        margin-left: 90px;
-        width: calc(100% - 90px);
-      }
+/* Tablet view adjustments (up to 1024px width) */
+@media (max-width: 1024px) {
 
-      .logo-container span, .menu li span, .report h4, .report li span, .logout span {
-        display: none;
-      }
+/* Shrinks sidebar width and padding for compact layout */
+.sidebar {
+  width: 70px;
+  padding: 20px 10px;
+}
 
-      .logo-container {
-        justify-content: center;
-      }
+/* Adjusts main content area to fill remaining space */
+.main-content {
+  margin-left: 90px;
+  width: calc(100% - 90px);
+}
 
-      .menu li, .report li {
-        justify-content: center;
-        padding: 15px 10px;
-      }
+/* Hides text labels for a cleaner, icon-focused sidebar */
+.logo-container span,
+.menu li span,
+.report h4,
+.report li span,
+.logout span {
+  display: none;
+}
 
-      .menu li i, .report li i {
-        margin-right: 0;
-        font-size: 20px;
-      }
+/* Centers logo and menu items */
+.logo-container {
+  justify-content: center;
+}
 
-      .logout {
-        padding: 15px 0;
-      }
+/* Centers menu and report list items and reduces padding */
+.menu li,
+.report li {
+  justify-content: center;
+  padding: 15px 10px;
+}
 
-      .logout i {
-        margin-right: 0;
-      }
-    }
+/* Reduces icon margin and size for menu and report items */
+.menu li i,
+.report li i {
+  margin-right: 0;
+  font-size: 20px;
+}
 
-    @media (max-width: 768px) {
-      .main-content {
-        margin-left: 0;
-        width: 100%;
-        padding: 20px;
-      }
+/* Reduces logout padding and centers icon */
+.logout {
+  padding: 15px 0;
+}
 
-      .sidebar {
-        transform: translateX(-100%);
-        z-index: 1000;
-      }
+.logout i {
+  margin-right: 0;
+}
+}
 
-      .sidebar.active {
-        transform: translateX(0);
-      }
+/* Mobile view adjustments (up to 768px width) */
+@media (max-width: 768px) {
 
-      .header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 15px;
-      }
+/* Makes main content full width and resets margin */
+.main-content {
+  margin-left: 0;
+  width: 100%;
+  padding: 20px;
+}
 
-      .search-notification {
-        width: 100%;
-        justify-content: space-between;
-      }
+/* Hides sidebar by default (slides out of view) */
+.sidebar {
+  transform: translateX(-100%);
+  z-index: 1000; /* Places sidebar above other elements when active */
+}
 
-      .filters {
-        flex-direction: column;
-      }
+/* Shows sidebar when active */
+.sidebar.active {
+  transform: translateX(0);
+}
 
-      .filter-buttons {
-        flex-direction: column;
-        width: 100%;
-      }
+/* Stacks header elements vertically */
+.header {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+}
 
-      .btn-filter, .btn-reset {
-        width: 100%;
-        justify-content: center;
-      }
+/* Spreads search bar and notification icons across full width */
+.search-notification {
+  width: 100%;
+  justify-content: space-between;
+}
 
-      .actions {
-        flex-direction: column;
-      }
+/* Stacks filters vertically */
+.filters {
+  flex-direction: column;
+}
 
-      .btn-action {
-        width: 100%;
-        justify-content: center;
-      }
+/* Stacks filter buttons vertically and makes them full width */
+.filter-buttons {
+  flex-direction: column;
+  width: 100%;
+}
 
-      .stats-cards {
-        grid-template-columns: 1fr;
-      }
-    }
+/* Expands filter and reset buttons to full width and centers text */
+.btn-filter,
+.btn-reset {
+  width: 100%;
+  justify-content: center;
+}
 
-    @media (max-width: 480px) {
-      .search {
-        display: none;
-      }
-    }
+/* Stacks action buttons vertically */
+.actions {
+  flex-direction: column;
+}
+
+/* Expands action buttons to full width and centers text */
+.btn-action {
+  width: 100%;
+  justify-content: center;
+}
+
+/* Displays stat cards in a single column */
+.stats-cards {
+  grid-template-columns: 1fr;
+}
+}
+
+/* Extra small screen adjustments (up to 480px width) */
+@media (max-width: 480px) {
+
+/* Hides the search bar to save space */
+.search {
+  display: none;
+}
+}
   </style>
 </head>
 <body>
